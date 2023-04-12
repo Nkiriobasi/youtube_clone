@@ -20,6 +20,7 @@ import Settings from './SidebarItems/Settings';
 import ReportHistory from './SidebarItems/ReportHistory';
 import Help from './SidebarItems/Help';
 import Feedback from './SidebarItems/Feedback';
+import { Link } from 'react-router-dom';
 
 
 
@@ -80,11 +81,28 @@ const Sidebar = () => {
                 </div>
 
                 {/* YOUTUBE LINKS */}
-                <div className="pt-2 my-2 border-t border-solid space-y-2 border-[#303030]">
-                    <Settings/>
-                    <ReportHistory/>
-                    <Help/>
-                    <Feedback/>
+                <div className="mt-2 pt-2 border-t border-solid border-[#303030]">
+                    <span className="pt-2 px-2.5 flex items-center justify-start flex-wrap text-[#AAAAAA]">
+                        <Link to={'/about'} className='inline text-[13px] mr-2'>About</Link>
+                        <Link to={'/about/press'} className='inline text-[13px] mr-2'>Press</Link>
+                        <Link to={'/about/copyright'} className='inline text-[13px] mr-2'>Copyright</Link>
+                        <Link to={'/contact_us'} className='inline text-[13px] mr-2'>Contact Us</Link>
+                        <Link to={'/creators'} className='inline text-[13px] mr-2'>Creator</Link>
+                        <Link to={'/ads'} className='inline text-[13px] mr-2'>Advertise</Link>
+                        <span className='inline text-[13px] mr-2'>Developers</span>
+                    </span>
+                    
+                    <span className="pt-4 px-2.5 flex items-center justify-start flex-wrap text-[#AAAAAA]">
+                        <Link to={'/terms'} className='inline text-[13px] mr-2'>Terms</Link>
+                        <Link to={'/privacy'} className='inline text-[13px] mr-2'>Privacy</Link>
+                        <Link to={'/about/policies'} className='inline text-[13px]'>Policy & Safety</Link>
+                        <span className='inline text-[13px] mr-2'>How YouTube works</span>
+                        <Link to={'/new'} className='inline text-[13px] mr-2'>Test new features</Link>
+                    </span>
+
+                    <span className="w-full inline-block pt-4 px-2.5 text-[#717171] text-[13px]">
+                        <span>© 2023 Google LLC</span>
+                    </span>
                 </div>
             </div>
         </div>
